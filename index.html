@@ -1,43 +1,399 @@
+jiujitsu/
+├── index.html
+├── style.css
+└── script.js
+
+
+
+
+
+1. index.html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog</title>
-<style>
-        header {
-background-color: #5000FF
-color: #000000
-}
-</style>
+    <title>Jiu-Jitsu - Arte Suave</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
 
- <h1>Meu blog tech</h1>
-        <p>importacia e fazer esportes fisicos</p>
+    <header class="cabecalho">
+        <h1>Jiu-Jitsu</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#historia">História</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#faixas">Faixas</a>
+        </nav>
     </header>
 
     <main>
-        <h2>Meu primeiro post</h2>
-        <p>Por:Wilian Sinotti</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar o porque o esportes fiicos são importantes no dia a dia.</p>
-    <main>
-        
-        <article>
-            <img src="imagem-blog.png"
-            alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi‑Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-            
-            <div>
-                <h2>Meu primeiro post</h2>
-                <p class="artigo-autor">Por:Willian Sinotti</p>
-                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar o porque o esportes fiicos são importantes no dia a dia.</p>
 
-                <button>❤️<span>0</span></button>
-                <button>👍<span>0</span></button>
+        <section id="inicio" class="inicio">
+            <div>
+                <h2>Jiu-Jitsu</h2>
+
+                <p>
+                    A arte suave que une técnica, disciplina,
+                    estratégia e respeito.
+                </p>
+
+                <button id="botao">
+                    Conheça o Jiu-Jitsu
+                </button>
+
+                <p id="mensagem"></p>
             </div>
-        </article>
+        </section>
+
+        <section id="historia" class="secao">
+            <h2>História do Jiu-Jitsu</h2>
+
+            <p>
+                O Jiu-Jitsu é uma arte marcial que utiliza principalmente
+                técnicas de controle, quedas, imobilizações e finalizações.
+                Sua prática valoriza a técnica e a estratégia, permitindo
+                que uma pessoa utilize alavancas e posicionamento para
+                controlar um adversário.
+            </p>
+
+            <p>
+                O Jiu-Jitsu brasileiro se desenvolveu ao longo do século XX
+                e ganhou reconhecimento internacional por sua aplicação
+                esportiva e pelas técnicas de luta no solo.
+            </p>
+        </section>
+
+        <section id="beneficios" class="secao">
+            <h2>Benefícios do Jiu-Jitsu</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Disciplina</h3>
+                    <p>
+                        Desenvolve dedicação, concentração e disciplina
+                        durante os treinamentos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Condicionamento</h3>
+                    <p>
+                        Ajuda a desenvolver resistência, força,
+                        coordenação e mobilidade.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Respeito</h3>
+                    <p>
+                        Incentiva o respeito aos professores,
+                        companheiros e adversários.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="faixas" class="secao">
+            <h2>Sistema de Faixas</h2>
+
+            <p>
+                No Jiu-Jitsu, as faixas representam diferentes níveis
+                de graduação e experiência.
+            </p>
+
+            <ul class="faixas">
+                <li>Branca</li>
+                <li>Azul</li>
+                <li>Roxa</li>
+                <li>Marrom</li>
+                <li>Preta</li>
+            </ul>
+        </section>
+
+        <section class="interacao">
+            <h2>Teste sua interação</h2>
+
+            <p>
+                Digite seu nome para receber uma mensagem.
+            </p>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+            <button id="botaoNome">
+                Enviar
+            </button>
+
+            <p id="resultado"></p>
+        </section>
+
     </main>
-   
+
+    <footer>
+        <p>Jiu-Jitsu - Arte Suave</p>
+        <p>Projeto desenvolvido para estudo de HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+2. style.css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    background-color: #111;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.cabecalho h1 {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.inicio {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    );
+    color: white;
+}
+
+.inicio h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+button {
+    background-color: #d4af37;
+    color: #111;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b8941f;
+}
+
+#mensagem {
+    margin-top: 20px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.secao {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+.secao h2 {
+    color: #111;
+    font-size: 32px;
+    margin-bottom: 25px;
+    border-left: 5px solid #d4af37;
+    padding-left: 15px;
+}
+
+.secao p {
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #8b0000;
+    margin-bottom: 10px;
+}
+
+.faixas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.faixas li {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.interacao {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.interacao h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.interacao p {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 14px;
+    width: 280px;
+    max-width: 90%;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#resultado {
+    margin-top: 25px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio h2 {
+        font-size: 42px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+3. script.js
+const botao = document.getElementById("botao");
+const mensagem = document.getElementById("mensagem");
+
+botao.addEventListener("click", function() {
+    mensagem.textContent = "Oss! 🥋 Continue treinando, aprendendo e evoluindo!";
+});
+
+const botaoNome = document.getElementById("botaoNome");
+const nome = document.getElementById("nome");
+const resultado = document.getElementById("resultado");
+
+botaoNome.addEventListener("click", function() {
+
+    if (nome.value.trim() === "") {
+        resultado.textContent = "Digite seu nome para continuar.";
+        return;
+    }
+
+    resultado.textContent =
+        "Oss, " + nome.value + "! Seja bem-vindo ao mundo do Jiu-Jitsu! 🥋";
+
+    nome.value = "";
+});
